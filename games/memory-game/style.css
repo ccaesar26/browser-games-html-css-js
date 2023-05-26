@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+
+body {
+    background: linear-gradient(45deg, #212f45, #272640);
+}
+
+#game {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 97.5vh;
+    background-color: #eae2b7;
+    border-radius: 8px;
+}
+
+#text {
+    background: linear-gradient(135deg, #f77f00, #d62828);
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 498px;
+    width: 664px;
+}
+
+.playcard {
+    width: 150px;
+    height: 150px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.playcard_anim:hover {
+    animation-name: card;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes card {
+    100% {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.19), 0 2px 4px rgba(0,0,0,0.23);
+    }
+}
+
+.board {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 4px 16px 32px rgba(0,0,0,0.19), 0 8px 16px rgba(0,0,0,0.23);
+}
+
+h3 {
+    font-family: 'Raleway',sans-serif;
+    color: #fefee3;
+    font-size: 28px;
+    padding: 16px 0 0 32px;
+    line-height: 0;
+}
+
+#reload {
+    height: 100px;
+    width: 100px;
+    background-image: url(images/reload.png);
+    border-radius: 16px;
+    margin: 32px;
+    align-self: center;
+}
+
+#reload:hover, #restart:hover, #start:hover, #home:hover{
+    animation-name: card;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+#popUp {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(45deg, #f9c74fcc, #f8961ecc);
+    top: 20%;
+    left: 20%;
+    height: 60%;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.19), 0 8px 16px rgba(0,0,0,0.23);
+    align-items: center;
+    justify-content: center;
+}
+
+#finalMessage, #startMessage {
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 24px;
+}
+
+#start {
+    background-image: url(images/start.png);
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    border-radius: 16px;
+}
+
+#restart {
+    height: 100px;
+    width: 100px;
+    background-image: url(images/reload.png);
+    border-radius: 16px;
+}
+
+#home {
+    height: 100px;
+    width: 100px;
+    background-image: url(images/home.png);
+    border-radius: 16px;
+    margin: 32px;
+    align-self: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#sideSection {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+}

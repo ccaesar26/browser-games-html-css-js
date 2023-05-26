@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+#page {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60px 100vh auto auto;
+    grid-gap: 16px;
+    background-color: #1A535C;
+}
+
+#navbar {
+    background-color: #4ECDC4;
+    position:sticky;
+    top: 12px;
+    border-radius: 8px;
+    display: flex;
+    z-index: 1;
+}
+
+#nav-list {
+    display: flex;
+    list-style: none;
+    margin-top: 25px;
+    margin-left: -32px;
+}
+
+.nav-link {
+    font-family: 'Raleway',sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 0%;
+    color: #F7FFF7;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.nav-link:hover {
+    animation-name: hoverLink;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+.nav-link:active {
+    color:#FFE66D;
+}
+
+@keyframes hoverLink {
+    100% {
+        background-color: #FF6B6B;
+    }
+}
+
+#title_section {
+    background-color: #FF6B6B;
+    border-radius: 8px;
+    align-content: center;
+}
+
+.title {
+    margin-top: 40vh;
+    color: #FFE66D;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    line-height: 0%;
+    text-align: center;
+}
+
+@media (max-width: 690px) {
+    .title {
+        line-height: 100%;
+    }    
+}
+
+.subtitle {
+    color: #F7FFF7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#content {
+    background-color: #FFE66D;
+    border-radius: 8px;
+    padding: 64px;
+}
+
+#contact {
+    background-color: #1A535C;
+    border-radius: 8px;
+}
+
+#games {
+    display: flex;
+    padding: 18px;
+    justify-content: space-evenly;
+}
+
+.game_cont {
+    height: 400px;
+    padding: 24px 24px 0 24px;
+    border-radius: 8px;
+}
+
+.game_img {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.game_title {
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-size: 28px;
+    color: #1A535C;
+}
+
+.game_link {
+    text-decoration: none;
+}
+
+.game_cont:hover {
+    animation-name: game;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes game {
+    100% {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}
+
+@media (max-width: 860px) {
+    #games {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footNote {
+    font-family: 'Raleway',sans-serif;
+    color:#F7FFF7;
+    font-size: 1em;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1A535C; 
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #85b3bb; 
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

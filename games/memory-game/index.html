@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Joc de memorie</title>
+        <link rel="stylesheet" href="style.css"></link>
+        <script src="app.js" charset="utf-8"></script>
+        <link rel="icon" href="../../icons/memory_icon.ico">
+    </head>
+    <body>
+        <div id="game">
+            <div class="board">
+                <div class="grid">
+                
+                </div>
+            </div>
+            
+            <div id="text">
+                <section id="sideSection">
+                    <div>
+                        <h3>Numărul de încercări: <span id="result">0</span></h3>
+                        <h3>Timp scurs: <span id="timp">00 : 00</span> minute</h3>
+                    </div>
+                    <div id="buttons">
+                        <div id="reload" onclick="location.reload();"></div>
+                        <a href="../../index.html">
+                            <div id="home"></div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="popUp">
+            <p id="finalMessage">Apasă butonul pentru a începe...</p>
+            <div id="start"></div>
+            <div id="restart" class="hidden"></div>
+        </div>
+    </body>
+</html>

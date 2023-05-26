@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #3bceac, #00daa0);
+}
+
+#game {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-side {
+    
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.side {
+    background: linear-gradient(45deg, #ffda00, #ffbf00);
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.19), 0 8px 16px rgba(0,0,0,0.23);
+    display: block;
+    text-align: center;
+}
+
+.grid {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("images/field.png");
+    border: solid;
+    border-width: 16px;
+    border-radius: 24px;
+    border-color: #081c15;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.19), 0 8px 16px rgba(0,0,0,0.23);
+}
+
+.grid div {
+    width: 40px;
+    height: 40px;
+}
+
+.snake {
+    background-image: url(images/snake.png);
+}
+
+.apple {
+    background-image: url(images/apple.png);
+    width: 40px;
+    height: 40px;
+    animation-name: appleAnim;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes appleAnim {
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.start, .home {
+    margin: 36px;
+    padding: 12px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 24px;
+    box-shadow: 0 9px #3c5d61;
+    background: linear-gradient(135deg,#35a7ff,#256eff);
+}
+
+.start:hover, .home:hover {
+    background: linear-gradient(135deg, #6bf178, #06d6a0);
+}
+
+.start:active, .home:active {
+  background: linear-gradient(135deg, #fe5f55, #ff5964);
+  box-shadow: 0 5px #32585d;
+  transform: translateY(4px);
+}
+
+.score {
+    margin-bottom: 12px;
+    font-size: 1.25em;
+    font-family: 'Raleway',sans-serif;
+    font-weight: bold;
+}
+
+.message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#message {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    height: 50%;
+    width: 45%;
+    background: linear-gradient(135deg, #ff85c8b3, #ffa3a5b3, #ffbf80b3);
+    z-index: 1;
+    border-radius: 24px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.19), 0 8px 16px rgba(0,0,0,0.23);
+    font-family: 'Raleway',sans-serif;
+    font-size: 2.5em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5%;
+    /*[...]*/
+}
+
+.message_image {
+    height: 180px;
+    width: 250px;
+    padding: 48px;
+}
+
